@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="2593" dy="1720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1635" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -319,7 +319,7 @@
             <mxPoint x="1479.9999999999998" y="540" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2vcO9atcq3-CdVQeZ948-69" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Result&amp;lt;Void,LoginError&amp;gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" parent="1" edge="1">
+        <mxCell id="2vcO9atcq3-CdVQeZ948-69" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;[Void, LoginError]&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="824.9999999999998" y="540" as="sourcePoint" />
             <mxPoint x="674.9999999999998" y="540" as="targetPoint" />
@@ -476,7 +476,7 @@
             <mxPoint x="835" y="1330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="W0oevVWpfDYC1-zcSMYY-42" value="Result&amp;lt;Data,Error&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" parent="1" edge="1" target="2vcO9atcq3-CdVQeZ948-11">
+        <mxCell id="W0oevVWpfDYC1-zcSMYY-42" value="[Data, Error]" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" parent="1" edge="1" target="2vcO9atcq3-CdVQeZ948-11">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1465" y="540" as="sourcePoint" />
             <mxPoint x="850" y="540" as="targetPoint" />
@@ -695,10 +695,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SXkkcP5f_q2AOX-nkuU-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;Monday&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Sequence diagram&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Clean feature&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Testing&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#feffc7, #ededed);" vertex="1" parent="1">
-          <mxGeometry x="30" y="110" width="120" height="100" as="geometry" />
+        <mxCell id="-SXkkcP5f_q2AOX-nkuU-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;Monday&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Sequence diagram DONE&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Presentation DONE&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Data and Integration TODO&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#feffc7, #ededed);" vertex="1" parent="1">
+          <mxGeometry x="30" y="110" width="200" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="-SXkkcP5f_q2AOX-nkuU-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Tuesday&lt;/h1&gt;&lt;div&gt;* Sequence diagram&lt;/div&gt;&lt;div&gt;* Clean feature&lt;/div&gt;&lt;div&gt;* Testing&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#fefec7, #ededed);" vertex="1" parent="1">
+        <mxCell id="-SXkkcP5f_q2AOX-nkuU-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Tuesday&lt;/h1&gt;&lt;div&gt;* Sequence diagram&lt;/div&gt;&lt;div&gt;* Presentation TODO&lt;/div&gt;&lt;div&gt;* Data and Integration TODO&lt;/div&gt;&lt;div&gt;* Testing TODO&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#fefec7, #ededed);" vertex="1" parent="1">
           <mxGeometry x="40" y="390" width="180" height="120" as="geometry" />
         </mxCell>
         <mxCell id="-SXkkcP5f_q2AOX-nkuU-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Wednesday&lt;/h1&gt;&lt;div&gt;* Sequence diagram&lt;/div&gt;&lt;div&gt;* Clean feature&lt;/div&gt;&lt;div&gt;* Testing&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#fefec7, #ededed);" vertex="1" parent="1">

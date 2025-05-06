@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1880" dy="1124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1551" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -695,7 +695,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="-SXkkcP5f_q2AOX-nkuU-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;Monday&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Sequence diagram&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Clean feature&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Testing&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#feffc7, #ededed);" vertex="1" parent="1">
+        <mxCell id="-SXkkcP5f_q2AOX-nkuU-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;Monday&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Sequence diagram&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 204), rgb(237, 237, 237));&quot;&gt;* Clean feature&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#feffc7, #ededed);" vertex="1" parent="1">
           <mxGeometry x="30" y="110" width="120" height="100" as="geometry" />
         </mxCell>
         <mxCell id="-SXkkcP5f_q2AOX-nkuU-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Tuesday&lt;/h1&gt;&lt;div&gt;* Sequence diagram&lt;/div&gt;&lt;div&gt;* Clean feature&lt;/div&gt;&lt;div&gt;* Testing&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;labelBackgroundColor=light-dark(#fefec7, #ededed);" vertex="1" parent="1">
