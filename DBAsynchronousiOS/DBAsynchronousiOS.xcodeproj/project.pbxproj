@@ -84,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31ABAB22DCA83B600D103ED /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C31ABAA02DC97AD700D103ED /* SplashBuilder.swift */,
+				C31ABA9E2DC976D700D103ED /* SplashViewModel.swift */,
+				C31ABA9A2DC9769A00D103ED /* SplashController.swift */,
+				C31ABA9B2DC9769A00D103ED /* SplashView.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		C33DA27E2DC33E220017E91F = {
 			isa = PBXGroup;
 			children = (
@@ -145,10 +156,7 @@
 		C33DA2DF2DC342D40017E91F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C31ABAA02DC97AD700D103ED /* SplashBuilder.swift */,
-				C31ABA9E2DC976D700D103ED /* SplashViewModel.swift */,
-				C31ABA9A2DC9769A00D103ED /* SplashController.swift */,
-				C31ABA9B2DC9769A00D103ED /* SplashView.xib */,
+				C31ABAB22DCA83B600D103ED /* Splash */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";

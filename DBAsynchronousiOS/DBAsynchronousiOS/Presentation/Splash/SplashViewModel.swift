@@ -7,7 +7,7 @@ enum SplashState {
     case login
 }
 
-// Implemented just to test how to expose a Publisher, but is to verbose
+// Defined just to test how to expose a Publisher, but is to verbose
 protocol SplashViewProtocol {
     func load()
     var statePublisher: AnyPublisher<SplashState, Never> { get }
