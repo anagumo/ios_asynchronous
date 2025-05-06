@@ -18,15 +18,23 @@ final class SplashViewModel: ObservableObject, SplashViewProtocol {
     var statePublisher: AnyPublisher<SplashState, Never> {
         $state.eraseToAnyPublisher()
     }
+    private let authDataSource: AuthDataSourceProtocol
     
-    init() {
+    init(authDataSource: AuthDataSourceProtocol) {
         state = .loading
+        self.authDataSource = authDataSource
     }
     
     func load() {
         Task {
+            let jwtData = authDataSource.get()
             try? await Task.sleep(for: .seconds(3))
-            state = .login
+            
+            if jwtData == nil {
+                state = .login
+            } else {
+                state = .home
+            }
         }
     }
 }

@@ -3,7 +3,9 @@ import UIKit
 final class SplashBuilder {
     
     func build() -> UIViewController {
-        let splashViewModel = SplashViewModel()
-        return SplashController(splashViewModel: splashViewModel)
+        let viewModel = SplashViewModel(
+            authDataSource: AuthDataSource.shared
+        )
+        return SplashController(splashViewModel: viewModel)
     }
 }

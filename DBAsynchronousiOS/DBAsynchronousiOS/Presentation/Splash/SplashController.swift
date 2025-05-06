@@ -55,6 +55,6 @@ class SplashController: UIViewController {
     
     private func renderLogin() {
         activityIndicatorView.stopAnimating()
-        debugPrint("Login")
+        present(LoginBuilder().build(), animated: true)
     }
 }
