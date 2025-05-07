@@ -16,6 +16,7 @@
 		C31ABAB92DCA845000D103ED /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABAB82DCA844B00D103ED /* LoginViewModel.swift */; };
 		C31ABABB2DCA845B00D103ED /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABABA2DCA845700D103ED /* LoginBuilder.swift */; };
 		C31ABABF2DCA861500D103ED /* AuthDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABABE2DCA860300D103ED /* AuthDataSource.swift */; };
+		C31ABBB32DCADA8900D103ED /* RegexLint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABBB22DCADA8400D103ED /* RegexLint.swift */; };
 		C33DA2C22DC340650017E91F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33DA2BC2DC340650017E91F /* Assets.xcassets */; };
 		C33DA2C42DC340650017E91F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33DA2BF2DC340650017E91F /* LaunchScreen.storyboard */; };
 		C33DA2C52DC340650017E91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DA2BB2DC340650017E91F /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 		C31ABAB82DCA844B00D103ED /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C31ABABA2DCA845700D103ED /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 		C31ABABE2DCA860300D103ED /* AuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataSource.swift; sourceTree = "<group>"; };
+		C31ABBB22DCADA8400D103ED /* RegexLint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexLint.swift; sourceTree = "<group>"; };
 		C33DA2872DC33E220017E91F /* DBAsynchronousiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBAsynchronousiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33DA29D2DC33E230017E91F /* DBAsynchronousiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBAsynchronousiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33DA2A72DC33E230017E91F /* DBAsynchronousiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBAsynchronousiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +196,7 @@
 		C33DA2DF2DC342D40017E91F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C31ABBB22DCADA8400D103ED /* RegexLint.swift */,
 				C31ABAB32DCA83F000D103ED /* Login */,
 				C31ABAB22DCA83B600D103ED /* Splash */,
 			);
@@ -349,6 +352,7 @@
 				C31ABAB62DCA840D00D103ED /* LoginController.swift in Sources */,
 				C33DA2C52DC340650017E91F /* AppDelegate.swift in Sources */,
 				C33DA2C62DC340650017E91F /* SceneDelegate.swift in Sources */,
+				C31ABBB32DCADA8900D103ED /* RegexLint.swift in Sources */,
 				C31ABAA12DC97ADB00D103ED /* SplashBuilder.swift in Sources */,
 				C31ABABB2DCA845B00D103ED /* LoginBuilder.swift in Sources */,
 				C31ABABF2DCA861500D103ED /* AuthDataSource.swift in Sources */,
