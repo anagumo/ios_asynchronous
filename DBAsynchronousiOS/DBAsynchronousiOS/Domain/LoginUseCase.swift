@@ -5,9 +5,9 @@ protocol LoginUseCaseProtocol {
 }
 
 final class LoginUseCase: LoginUseCaseProtocol {
-    private let authRepository: AuthRepository
+    private let authRepository: AuthRepositoryProtocol
     
-    init(authRepository: AuthRepository) {
+    init(authRepository: AuthRepositoryProtocol) {
         self.authRepository = authRepository
     }
     

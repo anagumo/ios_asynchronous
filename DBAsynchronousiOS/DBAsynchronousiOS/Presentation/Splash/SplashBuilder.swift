@@ -4,7 +4,7 @@ final class SplashBuilder {
     
     func build() -> UIViewController {
         let viewModel = SplashViewModel(
-            authDataSource: AuthDataSource.shared
+            getSessionUseCase: GetSessionUseCase()
         )
         return SplashController(splashViewModel: viewModel)
     }

@@ -18,23 +18,21 @@ final class SplashViewModel: ObservableObject, SplashViewProtocol {
     var statePublisher: AnyPublisher<SplashState, Never> {
         $state.eraseToAnyPublisher()
     }
-    private let authDataSource: AuthDataSourceProtocol
+    private let getSessionUseCase: GetSessionUseCaseProtocol
     
-    init(authDataSource: AuthDataSourceProtocol) {
+    init(getSessionUseCase: GetSessionUseCaseProtocol) {
         state = .loading
-        self.authDataSource = authDataSource
+        self.getSessionUseCase = getSessionUseCase
     }
     
     func load() {
-        Task {
-            let jwtData = authDataSource.get()
-            try? await Task.sleep(for: .seconds(3))
-            
-            if jwtData == nil {
-                state = .login
-            } else {
+        Task { @MainActor in
+            do {
+                try await Task.sleep(for: .seconds(3))
+                try await getSessionUseCase.run()
                 state = .home
-                authDataSource.clear()
+            } catch {
+                state = .login
             }
         }
     }
