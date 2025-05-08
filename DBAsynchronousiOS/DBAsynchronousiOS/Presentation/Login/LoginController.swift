@@ -4,11 +4,11 @@ import CombineCocoa
 
 class LoginController: UIViewController {
     // MARK: UI Components
-    @IBOutlet var userTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var userErrorLabel: UILabel!
-    @IBOutlet var passwordErrorLabel: UILabel!
-    @IBOutlet var loginButton: UIButton!
+    @IBOutlet private var userTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var userErrorLabel: UILabel!
+    @IBOutlet private var passwordErrorLabel: UILabel!
+    @IBOutlet private var loginButton: UIButton!
     
     // MARK: Observed Objects
     private let loginViewModel: LoginViewModel
@@ -32,6 +32,11 @@ class LoginController: UIViewController {
     
     // MARK: Binding
     private func bind() {
+        bindUIComponents()
+        bindLoginViewModel()
+    }
+    
+    private func bindUIComponents() {
         userTextField.textPublisher.compactMap { $0 }
             .combineLatest(passwordTextField.textPublisher.compactMap { $0 })
             .map { user, password in
@@ -43,9 +48,14 @@ class LoginController: UIViewController {
         loginButton.tapPublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.loginViewModel.login()
+                self?.loginViewModel.login(
+                    user: self?.userTextField.text,
+                    password: self?.passwordTextField.text
+                )
             }.store(in: &subscribers)
-        
+    }
+    
+    private func bindLoginViewModel() {
         loginViewModel.$loginState
             .receive(on: DispatchQueue.main)
             .sink { [weak self] loginState in
@@ -65,7 +75,6 @@ class LoginController: UIViewController {
     }
     
     // MARK: Rendering State
-    
     private func renderLoading() {
         userErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
@@ -76,7 +85,6 @@ class LoginController: UIViewController {
         loginButton.configuration?.showsActivityIndicator = false
         userTextField.text = ""
         passwordTextField.text = ""
-        //present(HerosBuilder().build(), animated: true)
     }
     
     private func renderInlineError(_ regexLintError: RegexLintError) {
@@ -92,9 +100,9 @@ class LoginController: UIViewController {
     
     private func renderFullScreenError(_ errorMessage: String) {
         loginButton.configuration?.showsActivityIndicator = false
-        /*present(
+        present(
             AlertBuilder().build(title: "Error", message: errorMessage),
             animated: true
-        )*/
+        )
     }
 }

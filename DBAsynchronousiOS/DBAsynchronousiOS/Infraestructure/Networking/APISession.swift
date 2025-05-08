@@ -1,14 +1,20 @@
 import Foundation
 
 protocol ApiSessionContract {
-    func request<RequestComponents: URLRequestComponents>(_ request: RequestComponents) async throws -> RequestComponents.Response
+    func request<URLRequest: URLRequestComponents>(_ request: URLRequest) async throws -> URLRequest.Response
 }
 
-final class ApiSession: ApiSessionContract {
+final class APISession: ApiSessionContract {
+    static let shared = APISession()
+    private let urlSession: URLSession
     
-    func request<RequestComponents: URLRequestComponents>(_ request: RequestComponents) async throws -> RequestComponents.Response {
+    init(urlSession: URLSession = .shared) {
+        self.urlSession = urlSession
+    }
+    
+    func request<URLRequest: URLRequestComponents>(_ request: URLRequest) async throws -> URLRequest.Response {
         let urlRequest = try URLRequestBuilder(urlRequestComponents: request).build()
-        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        let (data, response) = try await urlSession.data(for: urlRequest)
         
         let statusCode = (response as? HTTPURLResponse)?.statusCode
         
@@ -19,11 +25,11 @@ final class ApiSession: ApiSessionContract {
         switch statusCode {
         case 200..<300:
             // Validation for Login response data since is not a JSON
-            if RequestComponents.Response.self == Data.self {
-                return (data as! RequestComponents.Response)
+            if URLRequest.Response.self == Data.self {
+                return (data as! URLRequest.Response)
             } else {
                 do {
-                    let response = try JSONDecoder().decode(RequestComponents.Response.self, from: data)
+                    let response = try JSONDecoder().decode(URLRequest.Response.self, from: data)
                     return response
                 } catch {
                     throw APIError.decoding(url: request.path)

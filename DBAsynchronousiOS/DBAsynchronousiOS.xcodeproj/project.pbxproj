@@ -17,11 +17,15 @@
 		C31ABABB2DCA845B00D103ED /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABABA2DCA845700D103ED /* LoginBuilder.swift */; };
 		C31ABABF2DCA861500D103ED /* AuthDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABABE2DCA860300D103ED /* AuthDataSource.swift */; };
 		C31ABBB32DCADA8900D103ED /* RegexLint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABBB22DCADA8400D103ED /* RegexLint.swift */; };
-		C31ABCB82DCBF22700D103ED /* ApiSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCB72DCBF21F00D103ED /* ApiSession.swift */; };
+		C31ABCB82DCBF22700D103ED /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCB72DCBF21F00D103ED /* APISession.swift */; };
 		C31ABCBB2DCBF3A700D103ED /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCBA2DCBF3A000D103ED /* URLRequestBuilder.swift */; };
 		C31ABCBD2DCBF3F000D103ED /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCBC2DCBF3ED00D103ED /* APIError.swift */; };
 		C31ABCBF2DCBF52000D103ED /* URLRequestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCBE2DCBF51800D103ED /* URLRequestComponents.swift */; };
 		C31ABCC12DCBF69A00D103ED /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCC02DCBF69600D103ED /* HTTPMethod.swift */; };
+		C31ABCC42DCC19DD00D103ED /* LoginURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCC32DCC19C700D103ED /* LoginURLRequest.swift */; };
+		C31ABCC92DCC1BD200D103ED /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCC82DCC1BCC00D103ED /* AuthRepository.swift */; };
+		C31ABCCB2DCC21B400D103ED /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCCA2DCC21B000D103ED /* LoginUseCase.swift */; };
+		C31ABCCD2DCC666200D103ED /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABCCC2DCC665E00D103ED /* AlertBuilder.swift */; };
 		C33DA2C22DC340650017E91F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33DA2BC2DC340650017E91F /* Assets.xcassets */; };
 		C33DA2C42DC340650017E91F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33DA2BF2DC340650017E91F /* LaunchScreen.storyboard */; };
 		C33DA2C52DC340650017E91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DA2BB2DC340650017E91F /* AppDelegate.swift */; };
@@ -61,11 +65,15 @@
 		C31ABABA2DCA845700D103ED /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 		C31ABABE2DCA860300D103ED /* AuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataSource.swift; sourceTree = "<group>"; };
 		C31ABBB22DCADA8400D103ED /* RegexLint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexLint.swift; sourceTree = "<group>"; };
-		C31ABCB72DCBF21F00D103ED /* ApiSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSession.swift; sourceTree = "<group>"; };
+		C31ABCB72DCBF21F00D103ED /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		C31ABCBA2DCBF3A000D103ED /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		C31ABCBC2DCBF3ED00D103ED /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		C31ABCBE2DCBF51800D103ED /* URLRequestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestComponents.swift; sourceTree = "<group>"; };
 		C31ABCC02DCBF69600D103ED /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		C31ABCC32DCC19C700D103ED /* LoginURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginURLRequest.swift; sourceTree = "<group>"; };
+		C31ABCC82DCC1BCC00D103ED /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		C31ABCCA2DCC21B000D103ED /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		C31ABCCC2DCC665E00D103ED /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		C33DA2872DC33E220017E91F /* DBAsynchronousiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBAsynchronousiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33DA29D2DC33E230017E91F /* DBAsynchronousiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBAsynchronousiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33DA2A72DC33E230017E91F /* DBAsynchronousiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBAsynchronousiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,12 +136,12 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		C31ABABC2DCA85C100D103ED /* Repository */ = {
+		C31ABABC2DCA85C100D103ED /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				C31ABABD2DCA85FA00D103ED /* DataSources */,
+				C31ABCC82DCC1BCC00D103ED /* AuthRepository.swift */,
 			);
-			path = Repository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		C31ABABD2DCA85FA00D103ED /* DataSources */ = {
@@ -159,9 +167,43 @@
 				C31ABCBE2DCBF51800D103ED /* URLRequestComponents.swift */,
 				C31ABCBC2DCBF3ED00D103ED /* APIError.swift */,
 				C31ABCBA2DCBF3A000D103ED /* URLRequestBuilder.swift */,
-				C31ABCB72DCBF21F00D103ED /* ApiSession.swift */,
+				C31ABCB72DCBF21F00D103ED /* APISession.swift */,
+				C31ABCC72DCC1B8400D103ED /* API */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		C31ABCC22DCC19BD00D103ED /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				C31ABCC32DCC19C700D103ED /* LoginURLRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		C31ABCC52DCC1B4F00D103ED /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C31ABCCA2DCC21B000D103ED /* LoginUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C31ABCC62DCC1B5A00D103ED /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C31ABABD2DCA85FA00D103ED /* DataSources */,
+				C31ABABC2DCA85C100D103ED /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C31ABCC72DCC1B8400D103ED /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C31ABCC22DCC19BD00D103ED /* Requests */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		C33DA27E2DC33E220017E91F = {
@@ -187,10 +229,11 @@
 		C33DA2C12DC340650017E91F /* DBAsynchronousiOS */ = {
 			isa = PBXGroup;
 			children = (
+				C31ABCC52DCC1B4F00D103ED /* Domain */,
 				C31ABCB62DCBF21200D103ED /* Infraestructure */,
-				C31ABABC2DCA85C100D103ED /* Repository */,
 				C33DA2DF2DC342D40017E91F /* Presentation */,
 				C33DA2C72DC340680017E91F /* Project */,
+				C31ABCC62DCC1B5A00D103ED /* Data */,
 			);
 			path = DBAsynchronousiOS;
 			sourceTree = "<group>";
@@ -227,6 +270,7 @@
 		C33DA2DF2DC342D40017E91F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C31ABCCC2DCC665E00D103ED /* AlertBuilder.swift */,
 				C31ABBB22DCADA8400D103ED /* RegexLint.swift */,
 				C31ABAB32DCA83F000D103ED /* Login */,
 				C31ABAB22DCA83B600D103ED /* Splash */,
@@ -384,16 +428,20 @@
 				C33DA2C52DC340650017E91F /* AppDelegate.swift in Sources */,
 				C33DA2C62DC340650017E91F /* SceneDelegate.swift in Sources */,
 				C31ABBB32DCADA8900D103ED /* RegexLint.swift in Sources */,
+				C31ABCCD2DCC666200D103ED /* AlertBuilder.swift in Sources */,
+				C31ABCC42DCC19DD00D103ED /* LoginURLRequest.swift in Sources */,
 				C31ABAA12DC97ADB00D103ED /* SplashBuilder.swift in Sources */,
 				C31ABABB2DCA845B00D103ED /* LoginBuilder.swift in Sources */,
 				C31ABABF2DCA861500D103ED /* AuthDataSource.swift in Sources */,
 				C31ABCC12DCBF69A00D103ED /* HTTPMethod.swift in Sources */,
 				C31ABA9F2DC976DE00D103ED /* SplashViewModel.swift in Sources */,
 				C31ABAB92DCA845000D103ED /* LoginViewModel.swift in Sources */,
-				C31ABCB82DCBF22700D103ED /* ApiSession.swift in Sources */,
+				C31ABCB82DCBF22700D103ED /* APISession.swift in Sources */,
+				C31ABCC92DCC1BD200D103ED /* AuthRepository.swift in Sources */,
 				C31ABCBF2DCBF52000D103ED /* URLRequestComponents.swift in Sources */,
 				C31ABCBB2DCBF3A700D103ED /* URLRequestBuilder.swift in Sources */,
 				C31ABCBD2DCBF3F000D103ED /* APIError.swift in Sources */,
+				C31ABCCB2DCC21B400D103ED /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

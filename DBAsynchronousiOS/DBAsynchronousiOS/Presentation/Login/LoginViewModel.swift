@@ -10,13 +10,30 @@ enum LoginState {
 }
 
 final class LoginViewModel: ObservableObject {
+    private let loginUseCase: LoginUseCaseProtocol
     @Published var loginState: LoginState
     
-    init() {
+    init(loginUseCase: LoginUseCaseProtocol) {
+        self.loginUseCase = loginUseCase
         loginState = .none
     }
     
-    func login() {
+    func login(user: String?, password: String?) {
         loginState = .loading
+        
+        Task {
+            do {
+                let user = try RegexLint.validate(data: user, matchWith: .email)
+                let password = try RegexLint.validate(data: password, matchWith: .password)
+                try await loginUseCase.run(user: user, password: password)
+                await MainActor.run {
+                    loginState = .logged
+                }
+            } catch let regexLintError as RegexLintError {
+                loginState = .inlineError(regexLintError)
+            } catch let apiError as APIError {
+                loginState = .fullScreenError(apiError.reason)
+            }
+        }
     }
 }

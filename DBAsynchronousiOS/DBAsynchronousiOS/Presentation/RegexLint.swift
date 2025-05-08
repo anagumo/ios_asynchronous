@@ -11,9 +11,9 @@ struct RegexLint {
     /// - Parameters:
     ///   - data: a text of type (`String`) that represent the user input
     ///   - regexPattern: an enum case of type (`RegexPattern`)
-    static func validate(data: String, matchWith regexPattern: RegexPattern) throws -> String {
+    static func validate(data: String?, matchWith regexPattern: RegexPattern) throws -> String {
         let regex = try Regex(regexPattern.rawValue)
-        guard data.contains(regex) else {
+        guard let data, data.contains(regex) else {
             throw RegexLintError(from: regexPattern)
         }
         return data

@@ -34,6 +34,7 @@ final class SplashViewModel: ObservableObject, SplashViewProtocol {
                 state = .login
             } else {
                 state = .home
+                authDataSource.clear()
             }
         }
     }
