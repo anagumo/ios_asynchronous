@@ -23,16 +23,18 @@ final class LoginViewModel: ObservableObject {
         
         Task {
             do {
-                let user = try RegexLint.validate(data: user, matchWith: .email)
-                let password = try RegexLint.validate(data: password, matchWith: .password)
                 try await loginUseCase.run(user: user, password: password)
                 await MainActor.run {
                     loginState = .logged
                 }
             } catch let regexLintError as RegexLintError {
-                loginState = .inlineError(regexLintError)
+                await MainActor.run {
+                    loginState = .inlineError(regexLintError)
+                }
             } catch let apiError as APIError {
-                loginState = .fullScreenError(apiError.reason)
+                await MainActor.run {
+                    loginState = .fullScreenError(apiError.reason)
+                }
             }
         }
     }
