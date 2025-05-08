@@ -21,20 +21,14 @@ final class LoginViewModel: ObservableObject {
     func login(user: String?, password: String?) {
         loginState = .loading
         
-        Task {
+        Task { @MainActor in
             do {
                 try await loginUseCase.run(user: user, password: password)
-                await MainActor.run {
-                    loginState = .logged
-                }
+                loginState = .logged
             } catch let regexLintError as RegexLintError {
-                await MainActor.run {
-                    loginState = .inlineError(regexLintError)
-                }
+                loginState = .inlineError(regexLintError)
             } catch let apiError as APIError {
-                await MainActor.run {
-                    loginState = .fullScreenError(apiError.reason)
-                }
+                loginState = .fullScreenError(apiError.reason)
             }
         }
     }
