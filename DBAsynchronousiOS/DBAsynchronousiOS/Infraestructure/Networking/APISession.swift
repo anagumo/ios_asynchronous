@@ -7,15 +7,21 @@ protocol ApiSessionContract {
 final class APISession: ApiSessionContract {
     static let shared = APISession()
     private let urlSession: URLSession
+    private let interceptor: URLRequestInterceptor
     
     init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
+        self.interceptor = URLRequestInterceptor()
     }
     
     func request<URLRequest: URLRequestComponents>(_ request: URLRequest) async throws -> URLRequest.Response {
-        let urlRequest = try URLRequestBuilder(urlRequestComponents: request).build()
-        let (data, response) = try await urlSession.data(for: urlRequest)
+        var urlRequest = try URLRequestBuilder(urlRequestComponents: request).build()
         
+        if request.authorized {
+            try await interceptor.intercept(&urlRequest)
+        }
+    
+        let (data, response) = try await urlSession.data(for: urlRequest)
         let statusCode = (response as? HTTPURLResponse)?.statusCode
         
         guard let statusCode else {
