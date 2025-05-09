@@ -17,6 +17,13 @@
 		C30636922DCD6FE700C378B2 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30636912DCD6FE500C378B2 /* Hero.swift */; };
 		C30636942DCD704300C378B2 /* HerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30636932DCD703E00C378B2 /* HerosRepository.swift */; };
 		C30636972DCD714100C378B2 /* HeroDTOToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30636962DCD713500C378B2 /* HeroDTOToDomainMapper.swift */; };
+		C306369D2DCD744500C378B2 /* HerosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306369B2DCD744500C378B2 /* HerosController.swift */; };
+		C306369E2DCD744500C378B2 /* HerosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C306369C2DCD744500C378B2 /* HerosView.xib */; };
+		C30636A02DCD747600C378B2 /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306369F2DCD747200C378B2 /* HerosViewModel.swift */; };
+		C30636A22DCD747E00C378B2 /* HerosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30636A12DCD747B00C378B2 /* HerosBuilder.swift */; };
+		C30636A62DCD7D7500C378B2 /* HeroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30636A42DCD7D7500C378B2 /* HeroViewCell.swift */; };
+		C30636A72DCD7D7500C378B2 /* HeroViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30636A52DCD7D7500C378B2 /* HeroViewCell.xib */; };
+		C30636A92DCDC56B00C378B2 /* UIImageView+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30636A82DCDC55B00C378B2 /* UIImageView+Remote.swift */; };
 		C31ABA9C2DC9769A00D103ED /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABA9A2DC9769A00D103ED /* SplashController.swift */; };
 		C31ABA9D2DC9769A00D103ED /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31ABA9B2DC9769A00D103ED /* SplashView.xib */; };
 		C31ABA9F2DC976DE00D103ED /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31ABA9E2DC976D700D103ED /* SplashViewModel.swift */; };
@@ -75,6 +82,13 @@
 		C30636912DCD6FE500C378B2 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		C30636932DCD703E00C378B2 /* HerosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRepository.swift; sourceTree = "<group>"; };
 		C30636962DCD713500C378B2 /* HeroDTOToDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDTOToDomainMapper.swift; sourceTree = "<group>"; };
+		C306369B2DCD744500C378B2 /* HerosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosController.swift; sourceTree = "<group>"; };
+		C306369C2DCD744500C378B2 /* HerosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HerosView.xib; sourceTree = "<group>"; };
+		C306369F2DCD747200C378B2 /* HerosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModel.swift; sourceTree = "<group>"; };
+		C30636A12DCD747B00C378B2 /* HerosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosBuilder.swift; sourceTree = "<group>"; };
+		C30636A42DCD7D7500C378B2 /* HeroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewCell.swift; sourceTree = "<group>"; };
+		C30636A52DCD7D7500C378B2 /* HeroViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroViewCell.xib; sourceTree = "<group>"; };
+		C30636A82DCDC55B00C378B2 /* UIImageView+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Remote.swift"; sourceTree = "<group>"; };
 		C31ABA9A2DC9769A00D103ED /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		C31ABA9B2DC9769A00D103ED /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		C31ABA9E2DC976D700D103ED /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
@@ -156,6 +170,27 @@
 				C30636962DCD713500C378B2 /* HeroDTOToDomainMapper.swift */,
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		C30636982DCD741C00C378B2 /* Heros */ = {
+			isa = PBXGroup;
+			children = (
+				C30636A32DCD7D5300C378B2 /* Cell */,
+				C30636A12DCD747B00C378B2 /* HerosBuilder.swift */,
+				C306369F2DCD747200C378B2 /* HerosViewModel.swift */,
+				C306369B2DCD744500C378B2 /* HerosController.swift */,
+				C306369C2DCD744500C378B2 /* HerosView.xib */,
+			);
+			path = Heros;
+			sourceTree = "<group>";
+		};
+		C30636A32DCD7D5300C378B2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C30636A42DCD7D7500C378B2 /* HeroViewCell.swift */,
+				C30636A52DCD7D7500C378B2 /* HeroViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C31ABAB22DCA83B600D103ED /* Splash */ = {
@@ -323,6 +358,8 @@
 		C33DA2DF2DC342D40017E91F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C30636A82DCDC55B00C378B2 /* UIImageView+Remote.swift */,
+				C30636982DCD741C00C378B2 /* Heros */,
 				C30636812DCD311C00C378B2 /* PresentationError.swift */,
 				C31ABCCC2DCC665E00D103ED /* AlertBuilder.swift */,
 				C31ABBB22DCADA8400D103ED /* RegexLint.swift */,
@@ -450,8 +487,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33DA2C22DC340650017E91F /* Assets.xcassets in Resources */,
+				C306369E2DCD744500C378B2 /* HerosView.xib in Resources */,
 				C31ABAB72DCA840D00D103ED /* LoginView.xib in Resources */,
 				C31ABA9D2DC9769A00D103ED /* SplashView.xib in Resources */,
+				C30636A72DCD7D7500C378B2 /* HeroViewCell.xib in Resources */,
 				C33DA2C42DC340650017E91F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +525,7 @@
 				C33DA2C62DC340650017E91F /* SceneDelegate.swift in Sources */,
 				C30636822DCD312200C378B2 /* PresentationError.swift in Sources */,
 				C306368F2DCD6EB700C378B2 /* GetHerosUseCase.swift in Sources */,
+				C306369D2DCD744500C378B2 /* HerosController.swift in Sources */,
 				C30636942DCD704300C378B2 /* HerosRepository.swift in Sources */,
 				C31ABBB32DCADA8900D103ED /* RegexLint.swift in Sources */,
 				C31ABCCD2DCC666200D103ED /* AlertBuilder.swift in Sources */,
@@ -494,9 +534,12 @@
 				C306368D2DCD406D00C378B2 /* URLRequestInterceptor.swift in Sources */,
 				C31ABABB2DCA845B00D103ED /* LoginBuilder.swift in Sources */,
 				C31ABABF2DCA861500D103ED /* AuthDataSource.swift in Sources */,
+				C30636A92DCDC56B00C378B2 /* UIImageView+Remote.swift in Sources */,
 				C30636972DCD714100C378B2 /* HeroDTOToDomainMapper.swift in Sources */,
+				C30636A62DCD7D7500C378B2 /* HeroViewCell.swift in Sources */,
 				C31ABCC12DCBF69A00D103ED /* HTTPMethod.swift in Sources */,
 				C31ABA9F2DC976DE00D103ED /* SplashViewModel.swift in Sources */,
+				C30636A22DCD747E00C378B2 /* HerosBuilder.swift in Sources */,
 				C31ABAB92DCA845000D103ED /* LoginViewModel.swift in Sources */,
 				C31ABCB82DCBF22700D103ED /* APISession.swift in Sources */,
 				C30636922DCD6FE700C378B2 /* Hero.swift in Sources */,
@@ -504,6 +547,7 @@
 				C31ABCBF2DCBF52000D103ED /* URLRequestComponents.swift in Sources */,
 				C31ABCBB2DCBF3A700D103ED /* URLRequestBuilder.swift in Sources */,
 				C31ABCBD2DCBF3F000D103ED /* APIError.swift in Sources */,
+				C30636A02DCD747600C378B2 /* HerosViewModel.swift in Sources */,
 				C30636862DCD3CD300C378B2 /* ClearSessionUseCase.swift in Sources */,
 				C31ABCCB2DCC21B400D103ED /* LoginUseCase.swift in Sources */,
 			);

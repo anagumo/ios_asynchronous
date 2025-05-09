@@ -7,7 +7,7 @@ protocol ClearSessionUseCaseProtocol {
 final class ClearSessionUseCase: GetSessionUseCaseProtocol {
     private let authRepository: AuthRepositoryProtocol
     
-    init(authRepository: AuthRepositoryProtocol = AuthRepository.shared) {
+    init(authRepository: AuthRepositoryProtocol) {
         self.authRepository = authRepository
     }
     

@@ -50,7 +50,7 @@ class SplashController: UIViewController {
     
     private func renderHome() {
         activityIndicatorView.stopAnimating()
-        debugPrint("Home")
+        present(HerosBuilder().build(), animated: true)
     }
     
     private func renderLogin() {

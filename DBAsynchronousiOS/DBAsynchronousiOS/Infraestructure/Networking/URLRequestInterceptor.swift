@@ -5,14 +5,14 @@ protocol URLRequestInterceptorProtocol {
 }
 
 final class URLRequestInterceptor: URLRequestInterceptorProtocol {
-    private var authRepository: AuthRepositoryProtocol
+    private var authDataSource: AuthDataSource
     
-    init(authRepository: AuthRepositoryProtocol = AuthRepository.shared) {
-        self.authRepository = authRepository
+    init(authDataSource: AuthDataSource = .shared) {
+        self.authDataSource = authDataSource
     }
     
     func intercept(_ request: inout URLRequest) async throws {
-        let jwt = try await authRepository.getSession()
+        let jwt = try await authDataSource.get()
         request.setValue("Bearer \(jwt)", forHTTPHeaderField: "Authorization")
     }
 }

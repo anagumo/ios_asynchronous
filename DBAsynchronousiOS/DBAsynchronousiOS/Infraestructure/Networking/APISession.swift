@@ -17,7 +17,7 @@ final class APISession: ApiSessionContract {
     func request<URLRequest: URLRequestComponents>(_ request: URLRequest) async throws -> URLRequest.Response {
         var urlRequest = try URLRequestBuilder(urlRequestComponents: request).build()
         
-        if request.authorized {
+       if request.authorized {
             try await interceptor.intercept(&urlRequest)
         }
     
