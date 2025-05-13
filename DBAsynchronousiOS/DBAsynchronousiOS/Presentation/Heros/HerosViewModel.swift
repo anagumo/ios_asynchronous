@@ -7,9 +7,9 @@ enum HerosState {
     case none
 }
 
-final class HerosViewModel {
+final class HerosViewModel: ObservableObject {
     private var getHerosUseCase: GetHerosUseCaseProtocol
-     // MARK: Published objects
+    // MARK: Published objects
     @Published var state: HerosState
     @Published var heroList: [Hero]
     
@@ -22,7 +22,7 @@ final class HerosViewModel {
     func load() {
         Task { @MainActor in
             do {
-                let heros = try await getHerosUseCase.run(name: "")
+                let heros = try await getHerosUseCase.run()
                 state = .none
                 heroList = heros
             } catch let error as PresentationError {
@@ -31,5 +31,12 @@ final class HerosViewModel {
                 state = .error(error.localizedDescription)
             }
         }
+    }
+    
+    func get(by position: Int) -> String? {
+        guard position < heroList.count else {
+            return nil
+        }
+        return heroList[position].name
     }
 }

@@ -120,7 +120,14 @@ extension HerosController {
 extension HerosController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = (collectionView.frame.size.width - 60) / 2
-            return CGSize(width: width, height: 200)
+        let width = (collectionView.frame.size.width - 60) / 2
+        return CGSize(width: width, height: 200)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let heroName = herosViewModel.get(by: indexPath.row) else {
+            return
         }
+        show(HeroBuilder(name: heroName).build(), sender: true)
+    }
 }

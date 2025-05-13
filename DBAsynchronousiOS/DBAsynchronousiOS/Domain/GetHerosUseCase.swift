@@ -1,7 +1,7 @@
 import Foundation
 
 protocol GetHerosUseCaseProtocol {
-    func run(name: String) async throws -> [Hero]
+    func run() async throws -> [Hero]
 }
 
 final class GetHerosUseCase: GetHerosUseCaseProtocol {
@@ -11,7 +11,7 @@ final class GetHerosUseCase: GetHerosUseCaseProtocol {
         self.herosRepository = herosRepository
     }
     
-    func run(name: String) async throws -> [Hero] {
+    func run() async throws -> [Hero] {
         try await herosRepository.getAll()
     }
 }
