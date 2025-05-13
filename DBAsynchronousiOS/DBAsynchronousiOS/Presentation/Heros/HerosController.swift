@@ -10,6 +10,7 @@ class HerosController: UIViewController {
     // MARK: UI Components
     @IBOutlet private var errorStackView: UIStackView!
     @IBOutlet private var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet private var errorLabel: UILabel!
     @IBOutlet private var tryAgainButton: UIButton!
     @IBOutlet private var collectionView: UICollectionView!
     
@@ -44,26 +45,22 @@ class HerosController: UIViewController {
     
     // MARK: Binding
     private func bind() {
-        herosViewModel.$state
+        herosViewModel.appState?.$isLoading
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] state in
-                switch state {
-                case .loading:
-                    self?.renderLoading()
-                case let .error(message):
-                    self?.renderError(message)
-                case .none:
-                    self?.renderNone()
-                }
+            .sink { [weak self] isLoading in
+                self?.render(isLoading)
             }.store(in: &subscribers)
         
-        herosViewModel.$heroList
+        herosViewModel.$heros
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] heroList in
-                var snapshot = Snapshot()
-                snapshot.appendSections([.main])
-                snapshot.appendItems(heroList)
-                self?.dataSource?.apply(snapshot)
+            .sink { [weak self] heros in
+                self?.render(heros)
+            }.store(in: &subscribers)
+        
+        herosViewModel.appState?.$error
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] errorMessage in
+                self?.render(errorMessage)
             }.store(in: &subscribers)
         
         tryAgainButton.tapPublisher
@@ -72,30 +69,34 @@ class HerosController: UIViewController {
                 self?.herosViewModel.load()
             }.store(in: &subscribers)
         
-        // Do this invalidates the collection view delegates by the flow layout one
+        // This invalidates the collection view delegates by the flow layout one
         /*collectionView.didSelectItemPublisher
             .receive(on: DispatchQueue.main)
             .sink { indexPath in }
          .store(in: &subscribers)*/
     }
     
-    // MARK: Rendering state
-    private func renderLoading() {
-        activityIndicatorView.startAnimating()
-        errorStackView.isHidden = true
-        collectionView.isHidden = true
+    // MARK: Rendering Data
+    private func render(_ isLoading: Bool) {
+        if isLoading {
+            activityIndicatorView.startAnimating()
+        } else {
+            activityIndicatorView.stopAnimating()
+        }
     }
     
-    private func renderError(_ message: String) {
-        activityIndicatorView.stopAnimating()
-        errorStackView.isHidden = false
-        collectionView.isHidden = true
-    }
-    
-    private func renderNone() {
-        activityIndicatorView.stopAnimating()
-        errorStackView.isHidden = true
+    private func render(_ heros: [Hero]) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(heros)
+        dataSource?.apply(snapshot)
         collectionView.isHidden = false
+    }
+    
+    private func render(_ errorMessage: String?) {
+        guard let errorMessage else { return }
+        errorLabel.text = errorMessage
+        errorStackView.isHidden = false
     }
 }
 

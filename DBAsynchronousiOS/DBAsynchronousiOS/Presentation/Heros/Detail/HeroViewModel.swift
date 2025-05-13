@@ -3,13 +3,13 @@ import Combine
 
 final class HeroViewModel: ObservableObject {
     private var name: String
-    private let getHeroUseCase: GetHeroUseCase
+    private let getHeroUseCase: GetHeroUseCaseProtocol
     // MARK: Published objects
     let appState: AppState?
     @Published var hero: Hero?
     
     init(name: String,
-         getHeroUseCase: GetHeroUseCase,
+         getHeroUseCase: GetHeroUseCaseProtocol,
          appState: AppState) {
         self.name = name
         self.getHeroUseCase = getHeroUseCase

@@ -1,42 +1,38 @@
 import Foundation
 import Combine
 
-enum HerosState {
-    case loading
-    case error(String)
-    case none
-}
-
 final class HerosViewModel: ObservableObject {
     private var getHerosUseCase: GetHerosUseCaseProtocol
     // MARK: Published objects
-    @Published var state: HerosState
-    @Published var heroList: [Hero]
+    let appState: AppState?
+    @Published var heros: [Hero]
     
-    init(getHerosUseCase: GetHerosUseCaseProtocol) {
+    init(getHerosUseCase: GetHerosUseCaseProtocol,
+         appState: AppState) {
         self.getHerosUseCase = getHerosUseCase
-        state = .loading
-        heroList = []
+        self.appState = appState
+        heros = []
     }
     
     func load() {
+        appState?.isLoading = true
+        
         Task { @MainActor in
             do {
-                let heros = try await getHerosUseCase.run()
-                state = .none
-                heroList = heros
+                self.heros = try await getHerosUseCase.run()
             } catch let error as PresentationError {
-                state = .error(error.reason)
-            } catch {
-                state = .error(error.localizedDescription)
+                appState?.error = error.reason
+            } catch let error as APIError {
+                appState?.error = error.reason
             }
+            appState?.isLoading = false
         }
     }
     
     func get(by position: Int) -> String? {
-        guard position < heroList.count else {
+        guard position < heros.count else {
             return nil
         }
-        return heroList[position].name
+        return heros[position].name
     }
 }

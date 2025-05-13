@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="activityIndicatorView" destination="fL2-W3-0Fl" id="ViG-AK-qAK"/>
                 <outlet property="collectionView" destination="3Ic-Pk-xcy" id="Lhp-7Q-70D"/>
+                <outlet property="errorLabel" destination="hO8-3g-ldG" id="7ii-wE-f2T"/>
                 <outlet property="errorStackView" destination="Fvx-N3-wuI" id="15T-so-GoR"/>
                 <outlet property="tryAgainButton" destination="il9-6j-66u" id="odZ-es-d2p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -59,21 +60,24 @@
                     </subviews>
                 </stackView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fL2-W3-0Fl">
-                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" name="BackgroundColor"/>
                     <color key="color" name="AccentColor"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fL2-W3-0Fl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1s6-bJ-Pi8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Ic-Pk-xcy" secondAttribute="trailing" id="9mP-wJ-DPq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3Ic-Pk-xcy" secondAttribute="bottom" id="BvW-NV-nQ7"/>
-                <constraint firstItem="fL2-W3-0Fl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GBI-nU-Wbn"/>
                 <constraint firstItem="Fvx-N3-wuI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="P0G-Ab-axg"/>
-                <constraint firstItem="fL2-W3-0Fl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gD9-jf-ALK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fL2-W3-0Fl" secondAttribute="trailing" id="Q4E-w3-PQp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fvx-N3-wuI" secondAttribute="trailing" constant="20" id="ioQ-al-smc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fL2-W3-0Fl" secondAttribute="bottom" id="jvK-Yv-272"/>
                 <constraint firstItem="3Ic-Pk-xcy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mTt-LI-rMY"/>
                 <constraint firstItem="Fvx-N3-wuI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="noB-W2-4pW"/>
+                <constraint firstItem="fL2-W3-0Fl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pLa-r8-tMA"/>
                 <constraint firstItem="3Ic-Pk-xcy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tJJ-RR-SAu"/>
             </constraints>
             <point key="canvasLocation" x="60" y="20"/>

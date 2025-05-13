@@ -63,9 +63,9 @@
                         </collectionView>
                     </subviews>
                 </stackView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="5X8-io-2dH">
-                    <rect key="frame" x="186" y="416" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="5X8-io-2dH">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" name="BackgroundColor"/>
                     <color key="color" name="AccentColor"/>
                 </activityIndicatorView>
             </subviews>
@@ -74,9 +74,13 @@
             <constraints>
                 <constraint firstItem="2r6-bP-IPj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AYe-68-b4R"/>
                 <constraint firstItem="2r6-bP-IPj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Iqj-8C-YbB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5X8-io-2dH" secondAttribute="bottom" id="LoH-Xt-ZI2"/>
+                <constraint firstItem="5X8-io-2dH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lxc-Q4-fJE"/>
                 <constraint firstItem="hUV-qo-nTE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.25" id="cA1-hV-NaT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2r6-bP-IPj" secondAttribute="bottom" id="caB-ke-bAk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5X8-io-2dH" secondAttribute="trailing" id="lul-BY-f1U"/>
                 <constraint firstAttribute="trailing" secondItem="2r6-bP-IPj" secondAttribute="trailing" id="rEy-C5-sPw"/>
+                <constraint firstItem="5X8-io-2dH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sQH-id-l5d"/>
             </constraints>
             <point key="canvasLocation" x="138" y="20"/>
         </view>

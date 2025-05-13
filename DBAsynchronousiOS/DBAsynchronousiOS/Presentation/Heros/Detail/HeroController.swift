@@ -51,7 +51,6 @@ class HeroController: UIViewController {
     
     // MARK: Rendering Data
     private func render(_ isLoading: Bool) {
-        contentStackView.isHidden = isLoading
         if isLoading {
             activityIndicatorView.startAnimating()
         } else {
@@ -64,6 +63,7 @@ class HeroController: UIViewController {
         title = hero.name
         photoImageView.setImage(hero.photo)
         infoTextView.text = hero.info
+        contentStackView.isHidden = false
     }
     
     private func render(_ errorMessage: String?) {
