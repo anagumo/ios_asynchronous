@@ -33,7 +33,7 @@
                             <rect key="frame" x="0.0" y="225" width="393" height="534"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="GRY-3Z-rpc">
-                                    <rect key="frame" x="20" y="0.0" width="353" height="534"/>
+                                    <rect key="frame" x="16" y="0.0" width="361" height="534"/>
                                     <color key="backgroundColor" name="BackgroundColor"/>
                                     <color key="textColor" name="PrimaryTextColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -42,8 +42,8 @@
                             </subviews>
                             <color key="backgroundColor" name="BackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="GRY-3Z-rpc" firstAttribute="leading" secondItem="AFV-NG-ECv" secondAttribute="leading" constant="20" id="0d1-iz-KLH"/>
-                                <constraint firstAttribute="trailing" secondItem="GRY-3Z-rpc" secondAttribute="trailing" constant="20" id="6He-O3-Ji6"/>
+                                <constraint firstItem="GRY-3Z-rpc" firstAttribute="leading" secondItem="AFV-NG-ECv" secondAttribute="leading" constant="16" id="0d1-iz-KLH"/>
+                                <constraint firstAttribute="trailing" secondItem="GRY-3Z-rpc" secondAttribute="trailing" constant="16" id="6He-O3-Ji6"/>
                                 <constraint firstAttribute="bottom" secondItem="GRY-3Z-rpc" secondAttribute="bottom" id="p2w-Ny-XjN"/>
                                 <constraint firstItem="GRY-3Z-rpc" firstAttribute="top" secondItem="AFV-NG-ECv" secondAttribute="top" id="ymZ-vi-pqw"/>
                             </constraints>
@@ -54,7 +54,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="gRR-z9-ffg"/>
                             </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iVL-hY-Dln">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iVL-hY-Dln">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>

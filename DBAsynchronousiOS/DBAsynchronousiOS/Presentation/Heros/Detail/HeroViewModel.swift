@@ -4,16 +4,21 @@ import Combine
 final class HeroViewModel: ObservableObject {
     private var name: String
     private let getHeroUseCase: GetHeroUseCaseProtocol
+    private let getTransformationsUseCase: GetTransformationsUseCaseProtocol
     // MARK: Published objects
     let appState: AppState?
     @Published var hero: Hero?
+    @Published var transformations: [Transformation]
     
     init(name: String,
          getHeroUseCase: GetHeroUseCaseProtocol,
+         getTransformationsUseCase: GetTransformationsUseCaseProtocol,
          appState: AppState) {
         self.name = name
         self.getHeroUseCase = getHeroUseCase
+        self.getTransformationsUseCase = getTransformationsUseCase
         self.appState = appState
+        self.transformations = []
     }
     
     func load() {
@@ -28,6 +33,20 @@ final class HeroViewModel: ObservableObject {
                 appState?.error = error.reason
             }
             appState?.isLoading = false
+        }
+    }
+    
+    func loadTransformations() {
+        guard let heroIdentifier = hero?.identifier else { return }
+        
+        Task { @MainActor in
+            do {
+                self.transformations = try await getTransformationsUseCase.run(heroIdentifier: heroIdentifier)
+            } catch let error as PresentationError {
+                debugPrint(error.reason)
+            } catch let error as APIError {
+                debugPrint(error.reason)
+            }
         }
     }
 }

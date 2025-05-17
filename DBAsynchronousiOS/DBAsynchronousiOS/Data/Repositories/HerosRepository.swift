@@ -3,6 +3,7 @@ import Foundation
 protocol HerosRepositoryProtocol {
     func getAll() async throws -> [Hero]
     func get(name: String) async throws -> Hero
+    func getTransformations(heroIdentifier: String) async throws -> [Transformation]
 }
 
 final class HerosRepository: HerosRepositoryProtocol {
@@ -37,5 +38,19 @@ final class HerosRepository: HerosRepositoryProtocol {
         }
         
         return HeroDTOtoDomainMapper().map(heroDTO)
+    }
+    
+    func getTransformations(heroIdentifier: String) async throws -> [Transformation] {
+        let transformationDTOList = try await apiSession.request(
+            GetTransformationsURLRequest(heroIdentifier: heroIdentifier)
+        )
+        
+        guard !transformationDTOList.isEmpty else {
+            throw PresentationError.emptyList()
+        }
+        
+        return transformationDTOList.map {
+            TransformationDTOtoDomainMapper().map($0)
+        }
     }
 }

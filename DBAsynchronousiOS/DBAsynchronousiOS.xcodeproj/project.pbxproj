@@ -58,6 +58,13 @@
 		C33DA2DD2DC341E20017E91F /* DBAsynchronousiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DA2DA2DC341E20017E91F /* DBAsynchronousiOSUITests.swift */; };
 		C33DA2DE2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DA2DB2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift */; };
 		C3E19F1B2DD2C92E00D7D9A6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E19F1A2DD2C92800D7D9A6 /* AppState.swift */; };
+		C3E19F1D2DD2FF4100D7D9A6 /* GetTransformationsURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E19F1C2DD2FF3700D7D9A6 /* GetTransformationsURLRequest.swift */; };
+		C3E19F1F2DD2FFAA00D7D9A6 /* TransformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E19F1E2DD2FFA500D7D9A6 /* TransformationDTO.swift */; };
+		C3E1A0132DD3006100D7D9A6 /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1A0122DD3005D00D7D9A6 /* Transformation.swift */; };
+		C3E1A0152DD3015200D7D9A6 /* TransformationDTOToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1A0142DD3014800D7D9A6 /* TransformationDTOToDomainMapper.swift */; };
+		C3F598DB2DD84F63007BB98A /* GetTransformationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F598DA2DD84F5A007BB98A /* GetTransformationsUseCase.swift */; };
+		C3F598E02DD855FB007BB98A /* TransformationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F598DF2DD855FB007BB98A /* TransformationViewCell.xib */; };
+		C3F598E12DD855FB007BB98A /* TransformationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F598DE2DD855FB007BB98A /* TransformationViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +138,13 @@
 		C33DA2DA2DC341E20017E91F /* DBAsynchronousiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAsynchronousiOSUITests.swift; sourceTree = "<group>"; };
 		C33DA2DB2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAsynchronousiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C3E19F1A2DD2C92800D7D9A6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C3E19F1C2DD2FF3700D7D9A6 /* GetTransformationsURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransformationsURLRequest.swift; sourceTree = "<group>"; };
+		C3E19F1E2DD2FFA500D7D9A6 /* TransformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDTO.swift; sourceTree = "<group>"; };
+		C3E1A0122DD3005D00D7D9A6 /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
+		C3E1A0142DD3014800D7D9A6 /* TransformationDTOToDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDTOToDomainMapper.swift; sourceTree = "<group>"; };
+		C3F598DA2DD84F5A007BB98A /* GetTransformationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransformationsUseCase.swift; sourceTree = "<group>"; };
+		C3F598DE2DD855FB007BB98A /* TransformationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationViewCell.swift; sourceTree = "<group>"; };
+		C3F598DF2DD855FB007BB98A /* TransformationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +177,7 @@
 		C30636892DCD3F3A00C378B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3E19F1E2DD2FFA500D7D9A6 /* TransformationDTO.swift */,
 				C306368A2DCD3F4300C378B2 /* HeroDTO.swift */,
 			);
 			path = Models;
@@ -171,6 +186,7 @@
 		C30636902DCD6FE000C378B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3E1A0122DD3005D00D7D9A6 /* Transformation.swift */,
 				C30636912DCD6FE500C378B2 /* Hero.swift */,
 			);
 			path = Models;
@@ -179,6 +195,7 @@
 		C30636952DCD713100C378B2 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				C3E1A0142DD3014800D7D9A6 /* TransformationDTOToDomainMapper.swift */,
 				C30636962DCD713500C378B2 /* HeroDTOToDomainMapper.swift */,
 			);
 			path = Mappers;
@@ -202,6 +219,8 @@
 			children = (
 				C30636A42DCD7D7500C378B2 /* HeroViewCell.swift */,
 				C30636A52DCD7D7500C378B2 /* HeroViewCell.xib */,
+				C3F598DE2DD855FB007BB98A /* TransformationViewCell.swift */,
+				C3F598DF2DD855FB007BB98A /* TransformationViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -281,6 +300,7 @@
 		C31ABCC22DCC19BD00D103ED /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				C3E19F1C2DD2FF3700D7D9A6 /* GetTransformationsURLRequest.swift */,
 				C30636872DCD3F0700C378B2 /* GetHerosURLRequest.swift */,
 				C31ABCC32DCC19C700D103ED /* LoginURLRequest.swift */,
 			);
@@ -290,8 +310,9 @@
 		C31ABCC52DCC1B4F00D103ED /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C3276EDB2DCED2D000FD2578 /* GetHeroUseCase.swift */,
 				C30636902DCD6FE000C378B2 /* Models */,
+				C3F598DA2DD84F5A007BB98A /* GetTransformationsUseCase.swift */,
+				C3276EDB2DCED2D000FD2578 /* GetHeroUseCase.swift */,
 				C306368E2DCD6EB000C378B2 /* GetHerosUseCase.swift */,
 				C30636852DCD3CCD00C378B2 /* ClearSessionUseCase.swift */,
 				C30636832DCD316500C378B2 /* GetSessionUseCase.swift */,
@@ -383,14 +404,14 @@
 		C33DA2DF2DC342D40017E91F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C31ABAB22DCA83B600D103ED /* Splash */,
+				C31ABAB32DCA83F000D103ED /* Login */,
+				C30636982DCD741C00C378B2 /* Heros */,
 				C3E19F1A2DD2C92800D7D9A6 /* AppState.swift */,
 				C30636A82DCDC55B00C378B2 /* UIImageView+Remote.swift */,
-				C30636982DCD741C00C378B2 /* Heros */,
 				C30636812DCD311C00C378B2 /* PresentationError.swift */,
 				C31ABCCC2DCC665E00D103ED /* AlertBuilder.swift */,
 				C31ABBB22DCADA8400D103ED /* RegexLint.swift */,
-				C31ABAB32DCA83F000D103ED /* Login */,
-				C31ABAB22DCA83B600D103ED /* Splash */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -517,6 +538,7 @@
 				C31ABAB72DCA840D00D103ED /* LoginView.xib in Resources */,
 				C31ABA9D2DC9769A00D103ED /* SplashView.xib in Resources */,
 				C30636A72DCD7D7500C378B2 /* HeroViewCell.xib in Resources */,
+				C3F598E02DD855FB007BB98A /* TransformationViewCell.xib in Resources */,
 				C30636AD2DCEC90900C378B2 /* HeroView.xib in Resources */,
 				C33DA2C42DC340650017E91F /* LaunchScreen.storyboard in Resources */,
 			);
@@ -546,6 +568,7 @@
 				C31ABA9C2DC9769A00D103ED /* SplashController.swift in Sources */,
 				C31ABAB62DCA840D00D103ED /* LoginController.swift in Sources */,
 				C30636842DCD316A00C378B2 /* GetSessionUseCase.swift in Sources */,
+				C3E1A0152DD3015200D7D9A6 /* TransformationDTOToDomainMapper.swift in Sources */,
 				C30636882DCD3F0F00C378B2 /* GetHerosURLRequest.swift in Sources */,
 				C30636B02DCECA0100C378B2 /* HeroViewModel.swift in Sources */,
 				C30636B22DCECA0E00C378B2 /* HeroBuilder.swift in Sources */,
@@ -557,11 +580,14 @@
 				C306368F2DCD6EB700C378B2 /* GetHerosUseCase.swift in Sources */,
 				C30636AC2DCEC90900C378B2 /* HeroController.swift in Sources */,
 				C306369D2DCD744500C378B2 /* HerosController.swift in Sources */,
+				C3E1A0132DD3006100D7D9A6 /* Transformation.swift in Sources */,
 				C30636942DCD704300C378B2 /* HerosRepository.swift in Sources */,
+				C3F598E12DD855FB007BB98A /* TransformationViewCell.swift in Sources */,
 				C31ABBB32DCADA8900D103ED /* RegexLint.swift in Sources */,
 				C31ABCCD2DCC666200D103ED /* AlertBuilder.swift in Sources */,
 				C31ABCC42DCC19DD00D103ED /* LoginURLRequest.swift in Sources */,
 				C31ABAA12DC97ADB00D103ED /* SplashBuilder.swift in Sources */,
+				C3F598DB2DD84F63007BB98A /* GetTransformationsUseCase.swift in Sources */,
 				C306368D2DCD406D00C378B2 /* URLRequestInterceptor.swift in Sources */,
 				C31ABABB2DCA845B00D103ED /* LoginBuilder.swift in Sources */,
 				C31ABABF2DCA861500D103ED /* AuthDataSource.swift in Sources */,
@@ -574,6 +600,8 @@
 				C31ABAB92DCA845000D103ED /* LoginViewModel.swift in Sources */,
 				C31ABCB82DCBF22700D103ED /* APISession.swift in Sources */,
 				C30636922DCD6FE700C378B2 /* Hero.swift in Sources */,
+				C3E19F1D2DD2FF4100D7D9A6 /* GetTransformationsURLRequest.swift in Sources */,
+				C3E19F1F2DD2FFAA00D7D9A6 /* TransformationDTO.swift in Sources */,
 				C31ABCC92DCC1BD200D103ED /* AuthRepositoryProtocol.swift in Sources */,
 				C31ABCBF2DCBF52000D103ED /* URLRequestComponents.swift in Sources */,
 				C31ABCBB2DCBF3A700D103ED /* URLRequestBuilder.swift in Sources */,

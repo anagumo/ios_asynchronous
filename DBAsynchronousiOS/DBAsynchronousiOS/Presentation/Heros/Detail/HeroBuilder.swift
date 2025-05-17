@@ -8,10 +8,10 @@ final class HeroBuilder {
     }
     
     func build() -> UIViewController {
-        let useCase = GetHeroUseCase()
         let viewModel = HeroViewModel(
             name: name,
-            getHeroUseCase: useCase,
+            getHeroUseCase: GetHeroUseCase(),
+            getTransformationsUseCase: GetTransformationsUseCase(),
             appState: .shared
         )
         let controller = HeroController(heroViewModel: viewModel)
