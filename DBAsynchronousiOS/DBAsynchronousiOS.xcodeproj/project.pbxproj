@@ -55,8 +55,6 @@
 		C33DA2CA2DC3412A0017E91F /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C33DA2C92DC3412A0017E91F /* CombineCocoa */; };
 		C33DA2D62DC3415C0017E91F /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C33DA2D52DC3415C0017E91F /* KeychainSwift */; };
 		C33DA2D92DC341DE0017E91F /* DBAsynchronousiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DA2D72DC341DE0017E91F /* DBAsynchronousiOSTests.swift */; };
-		C33DA2DD2DC341E20017E91F /* DBAsynchronousiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DA2DA2DC341E20017E91F /* DBAsynchronousiOSUITests.swift */; };
-		C33DA2DE2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DA2DB2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift */; };
 		C3E19F1B2DD2C92E00D7D9A6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E19F1A2DD2C92800D7D9A6 /* AppState.swift */; };
 		C3E19F1D2DD2FF4100D7D9A6 /* GetTransformationsURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E19F1C2DD2FF3700D7D9A6 /* GetTransformationsURLRequest.swift */; };
 		C3E19F1F2DD2FFAA00D7D9A6 /* TransformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E19F1E2DD2FFA500D7D9A6 /* TransformationDTO.swift */; };
@@ -135,8 +133,6 @@
 		C33DA2BE2DC340650017E91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C33DA2C02DC340650017E91F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C33DA2D72DC341DE0017E91F /* DBAsynchronousiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAsynchronousiOSTests.swift; sourceTree = "<group>"; };
-		C33DA2DA2DC341E20017E91F /* DBAsynchronousiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAsynchronousiOSUITests.swift; sourceTree = "<group>"; };
-		C33DA2DB2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBAsynchronousiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C3E19F1A2DD2C92800D7D9A6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		C3E19F1C2DD2FF3700D7D9A6 /* GetTransformationsURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransformationsURLRequest.swift; sourceTree = "<group>"; };
 		C3E19F1E2DD2FFA500D7D9A6 /* TransformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDTO.swift; sourceTree = "<group>"; };
@@ -345,7 +341,6 @@
 			children = (
 				C33DA2C12DC340650017E91F /* DBAsynchronousiOS */,
 				C33DA2D82DC341DE0017E91F /* DBAsynchronousiOSTests */,
-				C33DA2DC2DC341E20017E91F /* DBAsynchronousiOSUITests */,
 				C33DA2882DC33E220017E91F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -390,15 +385,6 @@
 				C33DA2D72DC341DE0017E91F /* DBAsynchronousiOSTests.swift */,
 			);
 			path = DBAsynchronousiOSTests;
-			sourceTree = "<group>";
-		};
-		C33DA2DC2DC341E20017E91F /* DBAsynchronousiOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C33DA2DA2DC341E20017E91F /* DBAsynchronousiOSUITests.swift */,
-				C33DA2DB2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift */,
-			);
-			path = DBAsynchronousiOSUITests;
 			sourceTree = "<group>";
 		};
 		C33DA2DF2DC342D40017E91F /* Presentation */ = {
@@ -625,8 +611,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C33DA2DD2DC341E20017E91F /* DBAsynchronousiOSUITests.swift in Sources */,
-				C33DA2DE2DC341E20017E91F /* DBAsynchronousiOSUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
