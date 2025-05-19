@@ -4,7 +4,7 @@ import Combine
 final class HerosViewModel: ObservableObject {
     private var getHerosUseCase: GetHerosUseCaseProtocol
     // MARK: Published objects
-    let appState: AppState?
+    let appState: AppState
     @Published var heros: [Hero]
     
     init(getHerosUseCase: GetHerosUseCaseProtocol,
@@ -15,17 +15,17 @@ final class HerosViewModel: ObservableObject {
     }
     
     func load() {
-        appState?.isLoading = true
+        appState.isLoading = true
         
         Task { @MainActor in
             do {
                 self.heros = try await getHerosUseCase.run()
             } catch let error as PresentationError {
-                appState?.error = error.reason
+                appState.error = error.reason
             } catch let error as APIError {
-                appState?.error = error.reason
+                appState.error = error.reason
             }
-            appState?.isLoading = false
+            appState.isLoading = false
         }
     }
     

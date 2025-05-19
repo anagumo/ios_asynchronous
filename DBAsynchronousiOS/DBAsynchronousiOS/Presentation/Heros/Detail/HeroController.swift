@@ -40,7 +40,7 @@ class HeroController: UIViewController {
     }
     
     private func bind() {
-        heroViewModel.appState?.$isLoading
+        heroViewModel.appState.$isLoading
             .receive(on: DispatchQueue.main)
             .sink { [weak self] isLoading in
                 self?.render(isLoading)
@@ -58,7 +58,7 @@ class HeroController: UIViewController {
                 self?.render(transformations)
             }.store(in: &subscribers)
         
-        heroViewModel.appState?.$error
+        heroViewModel.appState.$error
             .receive(on: DispatchQueue.main)
             .sink { [weak self] errorMessage in
                 self?.render(errorMessage)

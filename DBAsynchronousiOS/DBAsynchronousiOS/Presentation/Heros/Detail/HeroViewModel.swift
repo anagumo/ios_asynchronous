@@ -6,7 +6,7 @@ final class HeroViewModel: ObservableObject {
     private let getHeroUseCase: GetHeroUseCaseProtocol
     private let getTransformationsUseCase: GetTransformationsUseCaseProtocol
     // MARK: Published objects
-    let appState: AppState?
+    let appState: AppState
     @Published var hero: Hero?
     @Published var transformations: [Transformation]
     
@@ -22,17 +22,17 @@ final class HeroViewModel: ObservableObject {
     }
     
     func load() {
-        appState?.isLoading = true
+        appState.isLoading = true
         
         Task { @MainActor in
             do {
                 self.hero = try await getHeroUseCase.run(name: name)
             } catch let error as PresentationError {
-                appState?.error = error.reason
+                appState.error = error.reason
             } catch let error as APIError {
-                appState?.error = error.reason
+                appState.error = error.reason
             }
-            appState?.isLoading = false
+            appState.isLoading = false
         }
     }
     

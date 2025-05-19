@@ -89,6 +89,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="5g3-5T-8JS"/>
                                     </constraints>
+                                    <color key="tintColor" name="PrimaryTextColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule">
                                         <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
@@ -122,7 +123,7 @@
             <color red="1" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryOrangeTextColor">
-            <color red="1" green="0.47843137254901957" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.47450980392156861" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryTextColor">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

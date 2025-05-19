@@ -56,49 +56,59 @@ class LoginController: UIViewController {
     }
     
     private func bindLoginViewModel() {
-        loginViewModel.$loginState
+        loginViewModel.appState.$isLoading
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] loginState in
-                switch loginState {
-                case .loading:
-                    self?.renderLoading()
-                case .logged:
-                    self?.renderLogged()
-                case let .inlineError(regexLintError):
-                    self?.renderInlineError(regexLintError)
-                case let .fullScreenError(errorMessage):
-                    self?.renderFullScreenError(errorMessage)
-                case .none:
-                    break
-                }
+            .sink { [weak self] isLoading in
+                self?.renderLoading(isLoading)
+            }.store(in: &subscribers)
+        
+        loginViewModel.appState.$logged
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] logged in
+                self?.render(logged)
+            }.store(in: &subscribers)
+        
+        loginViewModel.appState.$regexError
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] regexError in
+                self?.render(regexError)
+            }.store(in: &subscribers)
+        
+        loginViewModel.appState.$error
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] errorMessage in
+                self?.render(errorMessage)
             }.store(in: &subscribers)
     }
     
     // MARK: Rendering State
-    private func renderLoading() {
+    private func renderLoading(_ isLoading: Bool) {
         userErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
-        loginButton.configuration?.showsActivityIndicator = true
+        loginButton.configuration?.showsActivityIndicator = isLoading
     }
     
-    private func renderLogged() {
+    private func render(_ logged: Bool) {
+        guard logged else { return }
         loginButton.configuration?.showsActivityIndicator = false
         userTextField.text = ""
         passwordTextField.text = ""
+        show(HerosBuilder().build(), sender: self)
     }
     
-    private func renderInlineError(_ regexLintError: RegexLintError) {
+    private func render(_ regexError: RegexLintError) {
         loginButton.configuration?.showsActivityIndicator = false
-        if regexLintError == .email {
-            userErrorLabel.text = regexLintError.errorDescription
+        if regexError == .email {
+            userErrorLabel.text = regexError.errorDescription
             userErrorLabel.isHidden = false
-        } else if regexLintError == .password {
-            passwordErrorLabel.text = regexLintError.errorDescription
+        } else if regexError == .password {
+            passwordErrorLabel.text = regexError.errorDescription
             passwordErrorLabel.isHidden = false
         }
     }
     
-    private func renderFullScreenError(_ errorMessage: String) {
+    private func render(_ errorMessage: String?) {
+        guard let errorMessage else { return }
         loginButton.configuration?.showsActivityIndicator = false
         present(
             AlertBuilder().build(title: "Error", message: errorMessage),

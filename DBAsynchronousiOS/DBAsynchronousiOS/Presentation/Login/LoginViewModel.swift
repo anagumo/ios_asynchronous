@@ -1,35 +1,28 @@
 import Foundation
 import Combine
 
-enum LoginState {
-    case loading
-    case logged
-    case inlineError(RegexLintError) // For errors on ui ej. below text fields
-    case fullScreenError(String) // For blocking errors
-    case none
-}
-
 final class LoginViewModel: ObservableObject {
     private let loginUseCase: LoginUseCaseProtocol
-    @Published var loginState: LoginState
+    var appState: AppState
     
-    init(loginUseCase: LoginUseCaseProtocol) {
+    init(loginUseCase: LoginUseCaseProtocol, appState: AppState) {
         self.loginUseCase = loginUseCase
-        loginState = .none
+        self.appState = appState
     }
     
     func login(user: String?, password: String?) {
-        loginState = .loading
+        appState.isLoading = true
         
         Task { @MainActor in
             do {
                 try await loginUseCase.run(user: user, password: password)
-                loginState = .logged
-            } catch let regexLintError as RegexLintError {
-                loginState = .inlineError(regexLintError)
-            } catch let apiError as APIError {
-                loginState = .fullScreenError(apiError.reason)
+                appState.logged = true
+            } catch let error as RegexLintError {
+                appState.regexError = error
+            } catch let error as APIError {
+                appState.error = error.reason
             }
         }
+        appState.isLoading = false
     }
 }

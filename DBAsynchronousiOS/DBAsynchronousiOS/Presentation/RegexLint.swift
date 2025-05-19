@@ -24,6 +24,7 @@ struct RegexLint {
 enum RegexLintError: Error, LocalizedError {
     case email
     case password
+    case none
     
     /// Constructor  to initialize an error from the RegexLint
     init(from regex: RegexPattern) {
@@ -42,6 +43,8 @@ enum RegexLintError: Error, LocalizedError {
             "Email format is invalid"
         case .password:
             "The password must have at least 8 characters"
+        case .none:
+            nil
         }
     }
 }
