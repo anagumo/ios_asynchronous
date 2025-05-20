@@ -2,7 +2,7 @@ import XCTest
 import Combine
 @testable import DBAsynchronousiOS
 
-final class LoginViewModelTest: XCTestCase {
+final class LoginViewModelTests: XCTestCase {
     var sut: LoginViewModel!
     var mockLoginUseCase: MockLoginUseCase!
     

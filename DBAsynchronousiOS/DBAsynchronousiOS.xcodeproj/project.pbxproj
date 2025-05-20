@@ -68,11 +68,20 @@
 		C3F599DC2DD8612E007BB98A /* MockGetSessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F599DB2DD8610A007BB98A /* MockGetSessionUseCase.swift */; };
 		C3F599DF2DD8688E007BB98A /* jwt.txt in Sources */ = {isa = PBXBuildFile; fileRef = C3F599DE2DD8688B007BB98A /* jwt.txt */; };
 		C3F599E02DD86A73007BB98A /* jwt.txt in Resources */ = {isa = PBXBuildFile; fileRef = C3F599DE2DD8688B007BB98A /* jwt.txt */; };
-		C3F599E22DDABC3E007BB98A /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F599E12DDABC36007BB98A /* LoginViewModelTest.swift */; };
+		C3F599E22DDABC3E007BB98A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F599E12DDABC36007BB98A /* LoginViewModelTests.swift */; };
 		C3F59AD62DDBE96F007BB98A /* MockLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AD52DDBE969007BB98A /* MockLoginUseCase.swift */; };
 		C3F59AD82DDC005A007BB98A /* HerosViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AD72DDC0054007BB98A /* HerosViewModelTests.swift */; };
 		C3F59ADA2DDC00D8007BB98A /* MockGetHerosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AD92DDC00D2007BB98A /* MockGetHerosUseCase.swift */; };
 		C3F59ADC2DDC01E7007BB98A /* HeroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59ADB2DDC01E4007BB98A /* HeroData.swift */; };
+		C3F59ADE2DDC0769007BB98A /* HeroViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59ADD2DDC075F007BB98A /* HeroViewModelTests.swift */; };
+		C3F59AE22DDC22DA007BB98A /* MockGetHeroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AE12DDC22D2007BB98A /* MockGetHeroUseCase.swift */; };
+		C3F59AE42DDC22EF007BB98A /* MockGetTransformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AE32DDC22E6007BB98A /* MockGetTransformationUseCase.swift */; };
+		C3F59AE62DDC2B8C007BB98A /* TransformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AE52DDC2B87007BB98A /* TransformationData.swift */; };
+		C3F59AE82DDCC4A2007BB98A /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AE72DDCC4A1007BB98A /* MockURLProtocol.swift */; };
+		C3F59AEB2DDCC4F6007BB98A /* APISessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AEA2DDCC4F0007BB98A /* APISessionTests.swift */; };
+		C3F59AED2DDCCB7C007BB98A /* Heros.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F59AEC2DDCCB76007BB98A /* Heros.json */; };
+		C3F59AEF2DDCCBAC007BB98A /* Transformations.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F59AEE2DDCCBA4007BB98A /* Transformations.json */; };
+		C3F59AF32DDCCBD0007BB98A /* Hero.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F59AF22DDCCBCB007BB98A /* Hero.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,11 +156,20 @@
 		C3F599D82DD85F98007BB98A /* MockAuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthDataSource.swift; sourceTree = "<group>"; };
 		C3F599DB2DD8610A007BB98A /* MockGetSessionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetSessionUseCase.swift; sourceTree = "<group>"; };
 		C3F599DE2DD8688B007BB98A /* jwt.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = jwt.txt; sourceTree = "<group>"; };
-		C3F599E12DDABC36007BB98A /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		C3F599E12DDABC36007BB98A /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		C3F59AD52DDBE969007BB98A /* MockLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginUseCase.swift; sourceTree = "<group>"; };
 		C3F59AD72DDC0054007BB98A /* HerosViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModelTests.swift; sourceTree = "<group>"; };
 		C3F59AD92DDC00D2007BB98A /* MockGetHerosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetHerosUseCase.swift; sourceTree = "<group>"; };
 		C3F59ADB2DDC01E4007BB98A /* HeroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroData.swift; sourceTree = "<group>"; };
+		C3F59ADD2DDC075F007BB98A /* HeroViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModelTests.swift; sourceTree = "<group>"; };
+		C3F59AE12DDC22D2007BB98A /* MockGetHeroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetHeroUseCase.swift; sourceTree = "<group>"; };
+		C3F59AE32DDC22E6007BB98A /* MockGetTransformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetTransformationUseCase.swift; sourceTree = "<group>"; };
+		C3F59AE52DDC2B87007BB98A /* TransformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationData.swift; sourceTree = "<group>"; };
+		C3F59AE72DDCC4A1007BB98A /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		C3F59AEA2DDCC4F0007BB98A /* APISessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionTests.swift; sourceTree = "<group>"; };
+		C3F59AEC2DDCCB76007BB98A /* Heros.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Heros.json; sourceTree = "<group>"; };
+		C3F59AEE2DDCCBA4007BB98A /* Transformations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Transformations.json; sourceTree = "<group>"; };
+		C3F59AF22DDCCBCB007BB98A /* Hero.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hero.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +403,8 @@
 		C33DA2D82DC341DE0017E91F /* DBAsynchronousiOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				C3F59AE92DDCC4A5007BB98A /* Infraestructure */,
+				C3F59AE72DDCC4A1007BB98A /* MockURLProtocol.swift */,
 				C3F599DD2DD86885007BB98A /* Stubs */,
 				C3F599DA2DD86104007BB98A /* Domain */,
 				C3F599D72DD85F93007BB98A /* Data */,
@@ -412,8 +432,9 @@
 		C3F599D42DD85E9C007BB98A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C3F59ADD2DDC075F007BB98A /* HeroViewModelTests.swift */,
 				C3F59AD72DDC0054007BB98A /* HerosViewModelTests.swift */,
-				C3F599E12DDABC36007BB98A /* LoginViewModelTest.swift */,
+				C3F599E12DDABC36007BB98A /* LoginViewModelTests.swift */,
 				C3F599D52DD85EF6007BB98A /* SplashViewModelTest.swift */,
 			);
 			path = Presentation;
@@ -430,6 +451,8 @@
 		C3F599DA2DD86104007BB98A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C3F59AE32DDC22E6007BB98A /* MockGetTransformationUseCase.swift */,
+				C3F59AE12DDC22D2007BB98A /* MockGetHeroUseCase.swift */,
 				C3F59AD92DDC00D2007BB98A /* MockGetHerosUseCase.swift */,
 				C3F59AD52DDBE969007BB98A /* MockLoginUseCase.swift */,
 				C3F599DB2DD8610A007BB98A /* MockGetSessionUseCase.swift */,
@@ -440,10 +463,22 @@
 		C3F599DD2DD86885007BB98A /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
+				C3F59AF22DDCCBCB007BB98A /* Hero.json */,
+				C3F59AEE2DDCCBA4007BB98A /* Transformations.json */,
+				C3F59AEC2DDCCB76007BB98A /* Heros.json */,
+				C3F59AE52DDC2B87007BB98A /* TransformationData.swift */,
 				C3F59ADB2DDC01E4007BB98A /* HeroData.swift */,
 				C3F599DE2DD8688B007BB98A /* jwt.txt */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		C3F59AE92DDCC4A5007BB98A /* Infraestructure */ = {
+			isa = PBXGroup;
+			children = (
+				C3F59AEA2DDCC4F0007BB98A /* APISessionTests.swift */,
+			);
+			path = Infraestructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,7 +588,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F59AEF2DDCCBAC007BB98A /* Transformations.json in Resources */,
 				C3F599E02DD86A73007BB98A /* jwt.txt in Resources */,
+				C3F59AED2DDCCB7C007BB98A /* Heros.json in Resources */,
+				C3F59AF32DDCCBD0007BB98A /* Hero.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,15 +654,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F59AE62DDC2B8C007BB98A /* TransformationData.swift in Sources */,
+				C3F59AEB2DDCC4F6007BB98A /* APISessionTests.swift in Sources */,
+				C3F59AE22DDC22DA007BB98A /* MockGetHeroUseCase.swift in Sources */,
 				C3F599D92DD85F9E007BB98A /* MockAuthDataSource.swift in Sources */,
 				C3F59ADC2DDC01E7007BB98A /* HeroData.swift in Sources */,
 				C3F599DC2DD8612E007BB98A /* MockGetSessionUseCase.swift in Sources */,
 				C3F599DF2DD8688E007BB98A /* jwt.txt in Sources */,
+				C3F59AE82DDCC4A2007BB98A /* MockURLProtocol.swift in Sources */,
 				C3F59AD62DDBE96F007BB98A /* MockLoginUseCase.swift in Sources */,
 				C3F59ADA2DDC00D8007BB98A /* MockGetHerosUseCase.swift in Sources */,
 				C3F59AD82DDC005A007BB98A /* HerosViewModelTests.swift in Sources */,
 				C33DA2D92DC341DE0017E91F /* DBAsynchronousiOSTests.swift in Sources */,
-				C3F599E22DDABC3E007BB98A /* LoginViewModelTest.swift in Sources */,
+				C3F59AE42DDC22EF007BB98A /* MockGetTransformationUseCase.swift in Sources */,
+				C3F599E22DDABC3E007BB98A /* LoginViewModelTests.swift in Sources */,
+				C3F59ADE2DDC0769007BB98A /* HeroViewModelTests.swift in Sources */,
 				C3F599D62DD85F00007BB98A /* SplashViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
