@@ -62,7 +62,7 @@ final class APISessionTests: XCTestCase {
         )
         var apiError: APIError?
         do {
-            let _ = try await sut?.request(loginURLRequest)
+            try await sut?.request(loginURLRequest)
             XCTFail("Login error expected")
         } catch let error as APIError {
             apiError = error

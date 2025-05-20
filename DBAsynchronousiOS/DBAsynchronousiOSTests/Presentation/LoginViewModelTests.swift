@@ -24,6 +24,7 @@ final class LoginViewModelTests: XCTestCase {
     func testLogin_WhenStateIsLogged() async {
         // Given
         let loggedExpectation = expectation(description: "Logged state succeed")
+        let loginController = await LoginController(loginViewModel: sut)
         var subscriptions = Set<AnyCancellable>()
         
         // When
@@ -42,6 +43,7 @@ final class LoginViewModelTests: XCTestCase {
         
         // Then
         await fulfillment(of: [loggedExpectation], timeout: 0.1)
+        XCTAssertNotNil(loginController)
     }
     
     func testLogin_WhenStateIsFullScreenError() async throws {

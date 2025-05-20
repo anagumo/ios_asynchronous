@@ -12,7 +12,7 @@ final class AuthRepository: AuthRepositoryProtocol {
     private let authDataSource: AuthDataSourceProtocol
     
     init(apiSession: ApiSessionContract = APISession.shared,
-         authDataSource: AuthDataSource = .shared) {
+         authDataSource: AuthDataSourceProtocol = AuthDataSource.shared) {
         self.apiSession = apiSession
         self.authDataSource = authDataSource
     }

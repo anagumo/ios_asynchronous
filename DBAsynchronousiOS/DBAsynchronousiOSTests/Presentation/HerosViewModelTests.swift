@@ -27,6 +27,7 @@ final class HerosViewModelTests: XCTestCase {
         let heroDTOList = HeroData.givenDTOList
         let heroList = heroDTOList.compactMap { HeroDTOtoDomainMapper().map($0) }
         mockGetHerosUseCase.receivedResponse = heroList
+        let herosController = await HerosController(herosViewModel: sut)
         var subscriptions = Set<AnyCancellable>()
         
         // When
@@ -44,6 +45,7 @@ final class HerosViewModelTests: XCTestCase {
         XCTAssertEqual(sut.heros.count, 5)
         let hero = try XCTUnwrap(sut.get(by: 0))
         XCTAssertEqual(hero, "Goku")
+        XCTAssertNotNil(herosController)
     }
     
     func testLoadHeros_WhenIsError() async throws {

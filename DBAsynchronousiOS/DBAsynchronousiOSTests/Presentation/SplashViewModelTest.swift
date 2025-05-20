@@ -23,6 +23,7 @@ final class SplashViewModelTest: XCTestCase {
         var subscription = Set<AnyCancellable>()
         let loadingExpectation = expectation(description: "Loading Succeed")
         let loginExpectation = expectation(description: "Login Succeed")
+        let splashController = await SplashController(splashViewModel: sut)
         
         // When
         sut.$state
@@ -40,6 +41,7 @@ final class SplashViewModelTest: XCTestCase {
         
         // Then
         await fulfillment(of: [loadingExpectation, loginExpectation], timeout: 5)
+        XCTAssertNotNil(splashController)
     }
     
     func testSplash_WhenStateIsHome() async throws {

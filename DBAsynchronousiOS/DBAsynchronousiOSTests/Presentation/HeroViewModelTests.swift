@@ -32,6 +32,7 @@ final class HeroViewModelTests: XCTestCase {
     func testLoad_WhenIsSuccess() async throws {
         // Given
         let successExpectation = expectation(description: "Hero succeed")
+        let heroController = await HeroController(heroViewModel: sut)
         var subscriptions = Set<AnyCancellable>()
         
         // When
@@ -49,6 +50,7 @@ final class HeroViewModelTests: XCTestCase {
         XCTAssertNotNil(sut.hero)
         XCTAssertEqual(sut.transformations, [])
         XCTAssertEqual(piccolo.name, "Piccolo")
+        XCTAssertNotNil(heroController)
     }
     
     func testLoad_WhenIsError() async throws {
