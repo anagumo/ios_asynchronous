@@ -70,6 +70,9 @@
 		C3F599E02DD86A73007BB98A /* jwt.txt in Resources */ = {isa = PBXBuildFile; fileRef = C3F599DE2DD8688B007BB98A /* jwt.txt */; };
 		C3F599E22DDABC3E007BB98A /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F599E12DDABC36007BB98A /* LoginViewModelTest.swift */; };
 		C3F59AD62DDBE96F007BB98A /* MockLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AD52DDBE969007BB98A /* MockLoginUseCase.swift */; };
+		C3F59AD82DDC005A007BB98A /* HerosViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AD72DDC0054007BB98A /* HerosViewModelTests.swift */; };
+		C3F59ADA2DDC00D8007BB98A /* MockGetHerosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59AD92DDC00D2007BB98A /* MockGetHerosUseCase.swift */; };
+		C3F59ADC2DDC01E7007BB98A /* HeroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F59ADB2DDC01E4007BB98A /* HeroData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +149,9 @@
 		C3F599DE2DD8688B007BB98A /* jwt.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = jwt.txt; sourceTree = "<group>"; };
 		C3F599E12DDABC36007BB98A /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		C3F59AD52DDBE969007BB98A /* MockLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginUseCase.swift; sourceTree = "<group>"; };
+		C3F59AD72DDC0054007BB98A /* HerosViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModelTests.swift; sourceTree = "<group>"; };
+		C3F59AD92DDC00D2007BB98A /* MockGetHerosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetHerosUseCase.swift; sourceTree = "<group>"; };
+		C3F59ADB2DDC01E4007BB98A /* HeroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +412,7 @@
 		C3F599D42DD85E9C007BB98A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C3F59AD72DDC0054007BB98A /* HerosViewModelTests.swift */,
 				C3F599E12DDABC36007BB98A /* LoginViewModelTest.swift */,
 				C3F599D52DD85EF6007BB98A /* SplashViewModelTest.swift */,
 			);
@@ -423,6 +430,7 @@
 		C3F599DA2DD86104007BB98A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C3F59AD92DDC00D2007BB98A /* MockGetHerosUseCase.swift */,
 				C3F59AD52DDBE969007BB98A /* MockLoginUseCase.swift */,
 				C3F599DB2DD8610A007BB98A /* MockGetSessionUseCase.swift */,
 			);
@@ -432,6 +440,7 @@
 		C3F599DD2DD86885007BB98A /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
+				C3F59ADB2DDC01E4007BB98A /* HeroData.swift */,
 				C3F599DE2DD8688B007BB98A /* jwt.txt */,
 			);
 			path = Stubs;
@@ -608,9 +617,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3F599D92DD85F9E007BB98A /* MockAuthDataSource.swift in Sources */,
+				C3F59ADC2DDC01E7007BB98A /* HeroData.swift in Sources */,
 				C3F599DC2DD8612E007BB98A /* MockGetSessionUseCase.swift in Sources */,
 				C3F599DF2DD8688E007BB98A /* jwt.txt in Sources */,
 				C3F59AD62DDBE96F007BB98A /* MockLoginUseCase.swift in Sources */,
+				C3F59ADA2DDC00D8007BB98A /* MockGetHerosUseCase.swift in Sources */,
+				C3F59AD82DDC005A007BB98A /* HerosViewModelTests.swift in Sources */,
 				C33DA2D92DC341DE0017E91F /* DBAsynchronousiOSTests.swift in Sources */,
 				C3F599E22DDABC3E007BB98A /* LoginViewModelTest.swift in Sources */,
 				C3F599D62DD85F00007BB98A /* SplashViewModelTest.swift in Sources */,

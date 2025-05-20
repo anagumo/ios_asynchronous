@@ -44,7 +44,7 @@ final class LoginViewModelTest: XCTestCase {
         await fulfillment(of: [loggedExpectation], timeout: 0.1)
     }
     
-    func testLogin_WhenStateIsFullScreenError() {
+    func testLogin_WhenStateIsFullScreenError() async throws {
         // Given
         let failureExpectation = expectation(description: "Full screen error state succeed")
         mockLoginUseCase.receivedError = APIError(
@@ -54,45 +54,42 @@ final class LoginViewModelTest: XCTestCase {
         var subscriptions = Set<AnyCancellable>()
         
         // When
-        var receivedError: String?
         sut.appState.$error
             .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink { error in
-                receivedError = error
                 failureExpectation.fulfill()
             }.store(in: &subscriptions)
             
         sut.login(user: "regularuser@keepcoding.es", password: "Regularuser1")
         
         // Then
-        wait(for: [failureExpectation], timeout: 0.1)
-        XCTAssertNotNil(receivedError)
-        XCTAssertEqual(receivedError, "Wrong email or password. Please log in again.")
+        await fulfillment(of: [failureExpectation], timeout: 0.1)
+        let error = try XCTUnwrap(sut.appState.error)
+        XCTAssertNotNil(error)
+        XCTAssertEqual(error, "Wrong email or password. Please log in again.")
     }
     
-    func testLogin_WhenStateIsInlineScreenError() {
+    func testLogin_WhenStateIsInlineScreenError() async throws {
         // Given
         let failureExpectation = expectation(description: "Inline screen error state succeed")
         mockLoginUseCase.receivedRegexError = RegexLintError.email
         var subscriptions = Set<AnyCancellable>()
         
         // When
-        var receivedError: RegexLintError?
         sut.appState.$regexError
             .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink { error in
-                receivedError = error
                 failureExpectation.fulfill()
             }.store(in: &subscriptions)
             
         sut.login(user: "regularuser@keepcoding.es", password: "Regularuser1")
         
         // Then
-        wait(for: [failureExpectation], timeout: 0.1)
-        XCTAssertNotNil(receivedError)
-        XCTAssertEqual(receivedError, .email)
-        XCTAssertEqual(receivedError?.localizedDescription, "Email format is invalid")
+        await fulfillment(of: [failureExpectation], timeout: 0.1)
+        let regexError = try XCTUnwrap(sut.appState.regexError)
+        XCTAssertEqual(regexError, .email)
+        XCTAssertEqual(regexError.localizedDescription, "Email format is invalid")
     }
 }
